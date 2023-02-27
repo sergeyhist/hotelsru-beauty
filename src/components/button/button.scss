@@ -1,0 +1,31 @@
+@use 'assets/variables' as vars;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid vars.$accent;
+  border-radius: 40px;
+  height: 40px;
+  line-height: 16px;
+  cursor: pointer;
+
+  &_transparent {
+    background: transparent;
+  }
+
+  &_fill {
+    background: vars.$accent;
+    color: white;
+  }
+
+  &_white {
+    border-color: white;
+    background: transparent;
+    color: white;
+  }
+
+  & > span {
+    margin-top: -2px;
+  }
+}

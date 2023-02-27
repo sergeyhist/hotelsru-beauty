@@ -1,0 +1,65 @@
+@use 'assets/variables' as vars;
+
+.banner {
+  width: 100%;
+  background: vars.$accent;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  justify-items: start;
+  align-items: center;
+  color: white;
+  padding-inline: 20%;
+  overflow-y: clip;
+  overflow-x: hidden;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-block: 15px;
+  }
+
+  &__image {
+    width: 45vw;
+    min-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255, .3);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    margin-block: -15%;
+    justify-self: end;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255, .4);
+      border-radius: 50%;
+      height: 80%;
+      width: 80%;
+
+      & > img {
+        height: 80%;
+      }
+    }
+  }
+}
+
+@media (960px < width < 1281px ) {
+  .banner {
+    padding-inline: 10%;
+  }
+}
+
+@media (max-width: 960px ) {
+  .banner {
+    padding-inline: 5%;
+    grid-template-columns: 1fr;
+
+    &__image {
+      margin: 0 -15% -10% 0;
+    }
+  }
+}
